@@ -50,6 +50,10 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
 }
+li:hover{
+    transform: scale(1.2);
+    transition: width 0.5s ease;
+}
 
 .content {
     display: flex;
