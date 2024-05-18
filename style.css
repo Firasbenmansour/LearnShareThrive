@@ -7,9 +7,9 @@
 
 .container {
     min-height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(29, 48, 224, 0.5)), url(Background.jpg);
+    background-image: linear-gradient(to bottom, rgba(5, 85, 94, 0.411),rgb(0, 0, 0)), url(Background-fadded.png);
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-position: center;
     background-size: cover;
     display: flex;
@@ -186,3 +186,44 @@ li:hover{
         padding: 20px;
     }
 }
+.about{
+    background:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(10, 98, 104, 0.616)),url(Pattern.png);
+    background-size: cover;
+    min-height: 80vh;
+    color: white;
+    padding: 200px;
+    display: grid;
+    
+}
+
+.content2{
+
+
+    border-bottom: 2px solid rgba(255, 255, 255, 0.301);
+    border-right: 2px solid rgba(255, 255, 255, 0.322);
+    border-radius: 12px;
+    padding: 30px 40px;
+ 
+
+    box-sizing: border-box;
+}
+.about h1{
+    font-weight: 700;
+    font-size: 50px;
+    filter: drop-shadow(5px 5px 10px #000000);
+}
+.about p{
+    font-size: 28px;
+    filter: drop-shadow(0px 5px 5px #000000);
+}
+.socials{
+    margin-top: 20px;
+    float: right;
+    font-size: 28px;
+}
+.socials ul{
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
