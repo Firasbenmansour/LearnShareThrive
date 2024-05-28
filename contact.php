@@ -1,7 +1,7 @@
 <?php
 // Vérifie si le formulaire a été soumis
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Nettoye et valide les données du formulaire
+    // pour Nettoyez et validez les données du formulaire
     $nom = htmlspecialchars($_POST['nom']);
     $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
     $message = htmlspecialchars($_POST['message']);
@@ -10,20 +10,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($nom && $email && $message) {
         // Définir l'adresse email du destinataire
         $to = 'dafnasofack@gmail.com';
-        
+
         // Définir le sujet de l'email
         $subject = 'Nouveau message de contact';
-        
+
         // Définir les en-têtes de l'email
         $headers = "From: $email\r\n";
         $headers .= "Reply-To: $email\r\n";
         $headers .= "Content-Type: text/plain; charset=utf-8\r\n";
-        
+
         // Construire le corps de l'email
         $body = "Nom: $nom\n";
+        $body = "Prenom: $prenom\n";
         $body .= "Email: $email\n\n";
         $body .= "Message:\n$message\n";
-        
+
         // Envoyer l'email
         if (mail($to, $subject, $body, $headers)) {
             echo 'Merci pour votre message. Il a été envoyé avec succès.';
@@ -39,3 +40,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     exit();
 }
 ?>
+
