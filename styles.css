@@ -1,13 +1,14 @@
 * {
     margin: 0;  
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Chivo", sans-serif;
     box-sizing: border-box;
 }
 
+
 .container {
     min-height: 100vh;
-    background-image: linear-gradient(to bottom, rgba(5, 85, 94, 0.411),rgb(0, 0, 0)), url(Background-fadded.png);
+    background-image: linear-gradient(to bottom, rgba(21, 144, 158, 0.096),rgba(0, 0, 0, 0.774)), url(Background-fadded.png);
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center;
@@ -15,7 +16,9 @@
     display: flex;
     flex-direction: column;
     align-items: center; /* Centering content horizontally */
+    
 }
+
 
 nav {
     width: 100%;
@@ -25,6 +28,7 @@ nav {
     padding: 10px 0;  
 }
 
+
 .Logo {
     width: 180px;   
     cursor: pointer;
@@ -32,16 +36,20 @@ nav {
     margin-top: 10px;
 }
 
+
 nav ul {
+
     list-style: none;
     display: flex;
     gap: 50px;
     margin-right: 290px;
 }
 
+
 nav ul li {
     display: inline-block;
 }
+
 
 nav ul li a {
     font-family: "Poppins",sans-serif;
@@ -50,17 +58,40 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
 }
+
+
 li:hover{
     transform: scale(1.2);
     transition: width 0.5s ease;
 }
 
+
 .content {
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 95%;
     padding-top: 20px;
+}
+
+.header {
+    filter: drop-shadow(0px 5px 5px #0f0f0f);
+    border-radius: 50px;
+    width: 700px;
+    padding: 30px 40px;
+
+}
+.header h1{
+    color: white;
+    font-size: 50px;
+}
+.header h2{
+    color: rgb(194, 255, 235);
+    font-size: 24px;
+}
+.image{
+    width: 100px;
 }
 
 .wrapper {
@@ -70,19 +101,8 @@ li:hover{
     border: 2px solid rgba(255, 255, 255, .2);
     border-radius: 12px;
     padding: 30px 40px;
-    margin-right: 200px;
     margin-top: 70px;
     box-sizing: border-box;
-}
-
-@media (max-width: 768px) {
-    .content {
-        justify-content: center; /* Center the content on smaller screens */
-    }
-    .wrapper {
-        width: 90%;
-        margin-right: 0; /* Remove right margin on smaller screens */
-    }
 }
 
 .wrapper h1 {
@@ -92,12 +112,42 @@ li:hover{
     text-align: center;
 }
 
+.btn1{
+    display: flex;
+    gap: 10px;
+}
+
+.btn1 >:hover{
+    transform: scale(1.1);
+    transition: width 0.5s ease;
+}
+
+.filled-in-btn{
+    border: none;
+    background:  rgb(194, 255, 235);
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.filled-out-btn{
+    border: none;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
 .wrapper .input-box {
     position: relative;
     width: 100%;
     height: 50px;
     margin: 30px 0;
 }
+
 
 .input-box input {
     width: 100%;
@@ -112,9 +162,11 @@ li:hover{
     padding: 20px;
 }
 
+
 .input-box input::placeholder {
     color: rgb(255, 255, 255);
 }
+
 
 .input-box i {
     position: absolute;
@@ -125,6 +177,7 @@ li:hover{
     color: white;
 }
 
+
 .wrapper .remember-forgot {
     display: flex;
     justify-content: space-between;
@@ -133,19 +186,23 @@ li:hover{
     color: #fff;
 }
 
+
 .remember-forgot label input {
     accent-color: #fff;
     margin-right: 5px;
 }
+
 
 .remember-forgot a {
     color: #fff;
     text-decoration: none;
 }
 
+
 .remember-forgot a:hover {
     text-decoration: underline;
 }
+
 
 .wrapper .btn {
     width: 100%;
@@ -160,76 +217,136 @@ li:hover{
     font-weight: 600;
 }
 
-.wrapper .register-link {
+
+.wrapper .register-link, .login-link{
     margin: 20px 0 15px;
     text-align: center;
     color: #fff;
     text-decoration: none;
 }
 
-.wrapper .register-link a {
+
+.wrapper .register-link a, .login-link a {
     color: #fff;
     font-weight: 600;
     text-decoration: none;
 }
 
-.wrapper .register-link a:hover {
+
+.wrapper .register-link a:hover, .login-link a:hover{
     text-decoration: underline;
 }
 
-@media (max-width: 768px) {
-    .nav ul {
-        margin-right: 20px;
-    }
-    .wrapper {
-        width: 90%;
-        padding: 20px;
-    }
-}
-.about{
-    background:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(10, 98, 104, 0.616)),url(Pattern.png);
-    background-size: cover;
-    min-height: 80vh;
+.services-section{
+    background: black;
     color: white;
-    padding: 200px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 28px;
+    min-height: 100vh;
+}
+.services-section .title{
+    padding: 150px 20px 0px 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.services-section .title img{
+    width: 80px;
+    height: 80px;
+}
+.services-section .title .stars2{
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.services-section .services{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20vh;
+    padding: 10px;
+    gap: 100px;
+    
+}
+.card{
+    text-align: center;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-top: 2px solid rgba(255, 255, 255, .2);
+    border-right: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 30px;
+    padding: 20px;
+    width: 400px;
+}
+
+.card h1{
+    color: white;
+    font-size: 25px;
+    font-weight: 800;
+    margin: 20px 0px;
+}
+.card h2{
+    color: rgb(10, 218, 173);
+    font-size: 20px;
+}
+.s-icons{
+    width: 100px;
+}
+
+
+
+
+
+
+
+.about{
+    background:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(19, 201, 214, 0.459)),url(Pattern.png);
+    background-size: cover;
+    min-height: 100vh;
+    color: white;
+    padding: 200px 20px;
     display: grid;
     
 }
 
+
 .content2{
-
-
     border-bottom: 2px solid rgba(255, 255, 255, 0.301);
     border-right: 2px solid rgba(255, 255, 255, 0.322);
     border-radius: 12px;
     padding: 30px 40px;
- 
-
     box-sizing: border-box;
 }
+
+
 .about h1{
-    font-weight: 700;
+    font-weight: 900; 
     font-size: 50px;
-    filter: drop-shadow(5px 5px 10px #000000);
+    filter: drop-shadow(5px 5px 10px #000000); 
 }
+
+
 .about p{
-    font-size: 28px;
-    filter: drop-shadow(0px 5px 5px #000000);
+    font-weight: 500;
+    font-size: 25px;
+     filter: drop-shadow(0px 5px 5px #000000); 
 }
+
+
 .socials{
     margin-top: 20px;
     float: right;
     font-size: 28px;
 }
+
+
 .socials ul{
     list-style: none;
     display: flex;
     gap: 10px;
 }
 
-footer {
-
-    text-align: center;
-    padding: 10px;
-    margin-top: auto; 
-  }
