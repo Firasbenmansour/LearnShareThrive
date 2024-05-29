@@ -1,6 +1,6 @@
 
 
- @import url('https://fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap');
 
  *{
     margin:0;
@@ -9,6 +9,7 @@
  }
 body{
     height:3000px;
+    background-color: rgb(232, 221, 209);
     
 }
 
@@ -134,15 +135,20 @@ display:block;
 transition: all 0.3s ease-in;
 
 }
-
-
 .container{
     display:flex;
     justify-content: space-evenly;
     align-items: center;
     text-align: center;
 }
-
+.paragraphe{
+align-content: center;
+display: flex;
+text-align: center;
+justify-content: space-evenly;
+color: brown;
+font-size: 40px;
+}
 .colonne ul{
     display:block;
     
@@ -174,7 +180,6 @@ transition: all 0.3s ease-in;
 
 
 .bottom{
-    background-color: aliceblue;
     margin-top:1500px;
     height: 400px;
     width: 100%;
