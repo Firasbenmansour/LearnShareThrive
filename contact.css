@@ -9,18 +9,19 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url(Background-Blurred.jpg);
+    background-image: linear-gradient(to bottom, rgba(21, 144, 158, 0.096),rgba(0, 0, 0, 0.774)), url(Background-fadded.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
 }
 .wrapper {
-    width: 420px;
-    background: rgba(81, 81, 81, 0.2);
-    border: 2px solid rgba(255, 255, 255, .2) ;
-    border-radius: 12px;
-    padding: 30px 40px;
+    width: 550px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 30px;
+    padding: 50px 40px;
+    box-sizing: border-box;
 }
 .wrapper h1{
     color: white;
@@ -51,6 +52,20 @@ body {
     color:rgb(255, 255, 255);
     
 }
+#message{
+    width: 100% ;
+    max-width: 460px;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    background: transparent;
+    margin-bottom: 50px;
+    font-size: 16px;
+    color: white;
+    padding: 20px;
+}
+#message::placeholder{
+    color:rgb(255, 255, 255);
+}
 
 .input-box i{
    position: absolute;
@@ -61,24 +76,7 @@ body {
    color: white;
 }
 
-.wrapper .remember-forgot{
-   display: flex;
-   justify-content: space-between;
-   font-size: 16.5px;
-   margin: -15px 0 15px;
-   color: #fff;
-}
-.remember-forgot label input{
-    accent-color: #fff;
-    margin-right: 5px;
-}
-.remember-forgot a{
-    color: #fff;
-    text-decoration: none;
-}
-.remember-forgot a:hover{
-    text-decoration: underline;
-}
+
 .wrapper .btn{
     width: 100%;
     height: 45px;
