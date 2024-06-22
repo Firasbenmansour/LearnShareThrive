@@ -89,18 +89,4 @@ body {
     font-size: 15px;
     font-weight: 600;
 }
-.wrapper .register-link{
-    margin: 20px 0 15px;
-    text-align: center;
-    color: #fff; 
-    text-decoration: none;
-   
-}
-.wrapper .register-link a{
-    color: #fff;
-    font-weight: 600;
-    text-decoration: none;
-}
-.wrapper .register-link a:hover{
-    text-decoration: underline;
-}
+
