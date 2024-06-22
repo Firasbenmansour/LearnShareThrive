@@ -6,9 +6,9 @@
 }
 
 
-.container {
+.container{
     min-height: 100vh;
-    background-image: linear-gradient(to bottom, rgba(21, 144, 158, 0.096),rgba(0, 0, 0, 0.774)), url(Background-fadded.png);
+    background-image: linear-gradient(to bottom, rgba(21, 144, 158, 0.096),rgba(0, 0, 0, 0.774)), url(Images/Background-fadded.png);
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center;
@@ -300,11 +300,8 @@ li:hover{
 
 
 
-
-
-
 .about{
-    background:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(19, 201, 214, 0.459)),url(Pattern.png);
+    background:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(19, 201, 214, 0.459)),url(Images/Pattern.png);
     background-size: cover;
     min-height: 100vh;
     color: white;
