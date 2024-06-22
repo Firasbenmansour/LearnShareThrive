@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppings", sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(21, 144, 158, 0.096),rgba(0, 0, 0, 0.774)), url(Images/Background-fadded.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.container {
+    width: 550px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 30px;
+    padding: 50px 40px;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff; /* Darker text color */
+}
+
+
+.input-box {
+    margin-bottom: 15px;
+}
+
+label {
+    color: #fff;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+select,
+textarea,
+input[type="file"] {
+    width: 100%;
+    padding: 12px; /* Increased padding */
+    margin-top: 10px; /* Adjusted margin */
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(0, 0, 0, 0.2); /* Lighter border color */
+    border-radius: 20px; /* Adjusted border radius */
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    color: #333; /* Dark text color */
+}
+textarea{
+    width: 100% ;
+    max-width: 460px;
+}
+
+button {
+    width: 100%;
+    padding: 12px; /* Increased padding */
+    background-color: #f3f3f3; /* Blue button */
+    color: #000000;
+    border: none;
+    border-radius: 10px; /* Adjusted border radius */
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+button:hover {
+    background-color: #000000; /* Darker blue on hover */
+    color: #ffffff;
+}
+
