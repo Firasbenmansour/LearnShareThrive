@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit course</title>
+    <link rel="stylesheet" href="submit.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Submit a course</h1>
+        <form action="submit.php" method="post" enctype="multipart/form-data">
+            <div class="input-box">
+                <input type="text" placeholder="title" name="title" required>
+            </div>
+            <div class="input-box">
+            <select id="category" name="category" required>
+                <option value="math">Mathematics</option>
+                <option value="science">Physics</option>
+                <option value="histoire">English</option>
+                <option value="langues">Philosophy</option>
+                <option value="langues">Biology</option>
+                <option value="langues">Computer Science</option>
+            </select>
+            </div>
+            <div class="input-box">
+
+                <textarea id="description" name="description" placeholder="Description" rows="4" required></textarea>
+            </div>
+            <div class="input-box">
+            <label for="file">Upload</label>
+            <input type="file" id="file" name="file" required>
+            </div>
+            <button type="submit">submit</button>
+        </form>
+    </div>
+</body>
+</html>
