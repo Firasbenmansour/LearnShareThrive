@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="styles.css"> 
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" href="Logo-art-white.png">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chivo:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
@@ -31,59 +30,58 @@
                 <div class="btn1">
                     <a href="#services-section">
                         <button type="submit" class="filled-in-btn">Learn more</button>
-                        </a>
-                <a href="index.html">
-                    <button type="submit" class="filled-out-btn">Sign in</button>
-                </a>
+                    </a>
+                    <a href="index.html">
+                        <button type="submit" class="filled-out-btn">Sign in</button>
+                    </a>
                 </div>   
             </div>
             <div class="wrapper">
-                <form action="">
+                <form action="register.php" method="POST">
                     <h1>Register</h1>
                     <div class="input-box">
-                        <input type="text" placeholder="Username" required>
+                        <input type="text" name="username" placeholder="Username" required>
                         <i class='bx bxs-user'></i>
                     </div>
                     <div class="input-box">
-                        <input type="email" placeholder="email" required>
+                        <input type="email" name="email" placeholder="Email" required>
                         <i class='bx bxs-envelope'></i>
                     </div>
                     <div class="input-box">
-                        <input type="password" placeholder="Password" required>
+                        <input type="password" name="password" placeholder="Password" required>
                         <i class='bx bxs-lock-alt'></i>
                     </div>
                     <div class="input-box">
-                        <input type="date" placeholder="Birthday" required>
+                        <input type="date" name="birthday" placeholder="Birthday" required>
                         <i class='bx bxs-calendar'></i>
                     </div>
-                    <button type="submit" class="btn">Register</button>
+                    <button type="submit" name="register" class="btn">Register</button>
                     <div class="login-link">
                         Already a member? <a href="index.html">Sign In</a>
                     </div>
                 </form>
             </div>
-       
         </div>
     </div>
-    <div class="services-section" id="#services-section">
+    <div class="services-section" id="services-section">
         <div class="title">
-             <img src="stars-svgrepo-com.png" class="stars1" style="filter: invert(100%) sepia(93%) saturate(29%) hue-rotate(124deg) brightness(107%) contrast(110%);">
+             <img src="Images/stars-svgrepo-com.png" class="stars1" style="filter: invert(100%) sepia(93%) saturate(29%) hue-rotate(124deg) brightness(107%) contrast(110%);">
              <h1>Creative Learning Made Easy</h1>
-             <img src="stars-svgrepo-com.png" class="stars2" style="filter: invert(100%) sepia(93%) saturate(29%) hue-rotate(124deg) brightness(107%) contrast(110%);">
+             <img src="Images/stars-svgrepo-com.png" class="stars2" style="filter: invert(100%) sepia(93%) saturate(29%) hue-rotate(124deg) brightness(107%) contrast(110%);">
         </div>
         <div class="services">
         <div class="card">
-               <img src="instructor.png" class="s-icons" style="filter: invert(100%) sepia(93%) saturate(29%) hue-rotate(124deg) brightness(107%) contrast(110%);">
+               <img src="Images/instructor.png" class="s-icons" style="filter: invert(100%) sepia(93%) saturate(29%) hue-rotate(124deg) brightness(107%) contrast(110%);">
                <h1>Knowledge Sharing</h1>
                <h2>Share your knowledge and teach courses on subjects you love.</h2>
         </div>
         <div class="card">
-               <img src="collaboration.png" class="s-icons" style="filter: invert(100%) sepia(93%) saturate(29%) hue-rotate(124deg) brightness(107%) contrast(110%);">
+               <img src="Images/collaboration.png" class="s-icons" style="filter: invert(100%) sepia(93%) saturate(29%) hue-rotate(124deg) brightness(107%) contrast(110%);">
                <h1>Collaborative Learning</h1>
                <h2>Learn and grow with fellow students from around the world.</h2>
         </div>
         <div class="card">
-               <img src="online-library.png" class="s-icons" style="filter: invert(100%) sepia(93%) saturate(29%) hue-rotate(124deg) brightness(107%) contrast(110%);">
+               <img src="Images/online-library.png" class="s-icons" style="filter: invert(100%) sepia(93%) saturate(29%) hue-rotate(124deg) brightness(107%) contrast(110%);">
                <h1>Diverse Subjects</h1>
                <h2>Explore thousands of courses across various subjects, from beginner to advanced levels.</h2>
         </div>
@@ -110,7 +108,6 @@
                     <li><i class='bx bxl-youtube' ></i></li>
                 </ul>
              </div>
-            <!-- <img src="Untitled design (2).png" class="image"> -->
         </div>
     </div>
 </body>
