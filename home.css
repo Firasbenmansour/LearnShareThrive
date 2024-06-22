@@ -1,0 +1,300 @@
+/* Reset and general styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    
+    line-height: 1.6;
+}
+.page{
+    min-height: 100vh;
+    background-image: linear-gradient(to top, rgba(12, 115, 133, 0), rgba(0, 0, 0, 0.986)), /* additional layer */
+    linear-gradient(to top, rgba(24, 179, 171, 0.466), rgba(0, 0, 0, 1)), 
+    url(Images/Background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Header styles */
+.header {
+    background-color: #000000;
+    color: #fff;
+    padding: 10px 20px; /* Increased padding for better spacing */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .logo {
+    width: 100px;
+    height: auto;
+}
+
+.header .menu {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+     /* Pushes the menu items to the left */
+}
+
+.header .menu li {
+    margin: 0 15px; /* Increased margin for better spacing */
+}
+
+.header .menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.header .menu a:hover {
+    color: #0a8a8f;
+}
+
+.header .user {
+    width: 40px;
+    height: auto;
+    cursor: pointer;
+    margin-left: auto; /* Aligns the user icon to the right */
+}
+
+/* Dropdown styles */
+.user-dropdown {
+    position: relative;
+}
+
+.user-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0; /* Align dropdown to the right */
+    margin-top: 8px; /* Adjust spacing from the user icon */
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 40px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #000000;
+}
+
+.user-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.user-dropdown:focus-within .dropdown-content {
+    display: block;
+}
+
+/* Search bar styles */
+/* .searchflex {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.searchbarre form {
+    display: flex;
+    align-items: center;
+    border: 2px solid #b1b1b16e;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0); 
+    backdrop-filter: blur(10px); 
+    max-width: 800px;
+    width: 700px;
+    
+}
+
+.searchbarre input[type="search"] {
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    width: 100%;
+    background-color: transparent; 
+}
+.searchbarre input[type="search"]::placeholder {
+    color: #ffffffda;
+}
+.searchbarre .glass {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.searchbarre .glass:hover {
+    background-color: #444;
+} */
+
+
+/* Flex container for subjects */
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid with a minimum card width */
+    gap: 20px;
+    justify-content: center;
+    max-width: 1040px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+}
+
+.card {
+    background: transparent;
+    backdrop-filter: blur(10px);
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    font-size: 16px;
+    color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.616);
+    transition: transform 0.3s ease; /* Smooth animation */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slightly bigger */
+}
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 16px;
+}
+
+.card-content h3 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.card-content p {
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 1.3;
+}
+
+ .card-content .btn {
+    display: inline-block;
+    font-weight: 500;
+    padding: 8px 10px;
+    background: #ffffff;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-top: 16px;
+    color: #000000;
+} 
+.card-content .btn {
+    border: unset;
+    border-radius: 15px;
+    color: #000000;
+    z-index: 1;
+    background: #e8e8e8;
+    position: relative;
+    font-weight: 1000;
+    font-size: 15px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgb(0, 0, 0);
+    box-shadow: 4px 8px 19px -3px rgb(0, 0, 0);
+    transition: all 250ms;
+    overflow: hidden;
+}
+   
+.card-content .btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #000000;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgb(0, 0, 0);
+    box-shadow: 4px 8px 19px -3px rgb(0, 0, 0);
+    transition: all 250ms
+}
+   
+.card-content .btn:hover {
+    color: #e8e8e8;
+}
+   
+.card-content .btn:hover::before {
+    width: 100%;
+}
+
+
+
+@media (max-width: 768px) {
+    .card-container {
+        padding: 0 40px; /* Increase padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .card-container {
+        padding: 0 60px; /* Further increase padding for very small screens */
+    }
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header .menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header .menu li {
+        margin: 10px 0;
+    }
+
+    .searchbarre form {
+        width: 100%;
+    }
+
+    .megamenu {
+        position: static;
+        display: none;
+        width: 100%;
+    }
+
+    .megamenu .container {
+        flex-direction: column;
+    }
+
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .flex-box {
+        margin: 10px 0;
+    }
+}
+
