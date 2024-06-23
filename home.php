@@ -27,7 +27,7 @@ if (isset($_POST['logout'])) {
 <body>
     <div class="page">
         <div class="header">
-            <img src="Images/LOGO.png" alt="Logo" class="logo">
+        <a href="home.php"><img src="Images/LOGO.png" alt="Logo" class="logo"></a>
             <ul class="menu">
                 <li><a href="#">ABOUT US</a></li>
                 <li><a href="submit.html">UPLOAD</a></li>
@@ -57,7 +57,7 @@ if (isset($_POST['logout'])) {
                 <div class="card-content">
                     <h3>Mathematics</h3>
                     <p>Explore the world of numbers, equations, and algorithms. Whether you're tackling algebra or calculus, we have the resources to help you succeed.</p>
-                    <a href="math.html" class="btn">Start learning</a>
+                    <a href="subjects/math/math.php" class="btn">Start learning</a>
                 </div>
             </div>
             <div class="card">
@@ -65,7 +65,7 @@ if (isset($_POST['logout'])) {
                 <div class="card-content">
                     <h3>Physics</h3>
                     <p>Dive into the laws of nature and understand the forces that govern the universe. From classical mechanics to quantum physics, let's explore together.</p>
-                    <a href="physics.html" class="btn">Start learning</a>
+                    <a href="subjects/physics/physics.php" class="btn">Start learning</a>
                 </div>
             </div>
             <div class="card">
@@ -73,7 +73,7 @@ if (isset($_POST['logout'])) {
                 <div class="card-content">
                     <h3>English</h3>
                     <p>Enhance your language skills with our comprehensive English courses. Improve your grammar, expand your vocabulary, and master the art of writing.</p>
-                    <a href="english.html" class="btn">Start learning</a>
+                    <a href="subjects/english/english.php" class="btn">Start learning</a>
                 </div>
             </div>
             <div class="card">
@@ -81,7 +81,7 @@ if (isset($_POST['logout'])) {
                 <div class="card-content">
                     <h3>Philosophy</h3>
                     <p>Embark on a journey of intellectual discovery. Delve into the thoughts of great philosophers and tackle the big questions about existence and morality.</p>
-                    <a href="philosophy.html" class="btn">Start learning</a>
+                    <a href="subjects/philosophy/philosophy.php" class="btn">Start learning</a>
                 </div>
             </div>
             <div class="card">
@@ -89,7 +89,7 @@ if (isset($_POST['logout'])) {
                 <div class="card-content">
                     <h3>Biology</h3>
                     <p>Uncover the mysteries of life through our biology courses. Study the complexities of ecosystems, genetics, and the inner workings of living organisms.</p>
-                    <a href="biology.html" class="btn">Start learning</a>
+                    <a href="subjects/biology/biology.php" class="btn">Start learning</a>
                 </div>
             </div>
             <div class="card">
@@ -97,7 +97,7 @@ if (isset($_POST['logout'])) {
                 <div class="card-content">
                     <h3>Computer Science</h3>
                     <p>Step into the world of computing and technology. Learn programming languages, software development, and the principles of artificial intelligence.</p>
-                    <a href="computerScience.html" class="btn">Start learning</a>
+                    <a href="subjects/computerScience/computerScience.php" class="btn">Start learning</a>
                 </div>
             </div>
         </div>        
