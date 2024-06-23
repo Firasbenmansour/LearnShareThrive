@@ -10,11 +10,12 @@ body {
     
     line-height: 1.6;
 }
+
 .page{
     min-height: 100vh;
     background-image: linear-gradient(to top, rgba(12, 115, 133, 0), rgba(0, 0, 0, 0.986)), /* additional layer */
     linear-gradient(to top, rgba(24, 179, 171, 0.466), rgba(0, 0, 0, 1)), 
-    url(Images/Background.jpg);
+    url(/learnsharethrive/Images/Background.jpg);
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center;
