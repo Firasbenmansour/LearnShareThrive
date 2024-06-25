@@ -16,8 +16,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: home.php"); // Redirect to home.php
         exit();
     } else {
-        $error = "Invalid username or password. Please try again.";
-        header("Location: index.html?error=" . urlencode($error)); // Redirect back to login page with error message
+        $_SESSION["error"] = "Invalid username or password. Please try again.";
+        header("Location: index.php"); // Redirect back to login page
         exit();
     }
 }
