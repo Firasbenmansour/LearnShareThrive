@@ -25,8 +25,8 @@ while (($ligne = fgetcsv($users_file)) !== false) {
     if ($ligne[0] == $self_id) {
         // Assign user information to variables
         $username = $ligne[1];
-        $email = $ligne[2];
-        $birthday = $ligne[3];
+        $email = $ligne[3];
+        $birthday = $ligne[4];
         break;
     }
 }
@@ -41,12 +41,13 @@ fclose($users_file);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Account</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chivo:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <style>
-    * {
-    margin: 0;
+* {
+    margin: 0;  
     padding: 0;
+    font-family: "Chivo", sans-serif;
     box-sizing: border-box;
-    font-family: "poppins", sans-serif;
 }
 
 body {
@@ -54,16 +55,35 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image: linear-gradient(to bottom, rgba(21, 144, 158, 0.096), rgba(0, 0, 0, 0.774)), url(Images/Background-fadded.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
+    background: linear-gradient(12deg, #000000, #093c41, #0c895e);
+    background-size: 600% 600%;
+    -webkit-animation: AnimationName 34s ease infinite;
+    -moz-animation: AnimationName 34s ease infinite;
+    animation: AnimationName 34s ease infinite;
 }
 
+@-webkit-keyframes AnimationName {
+    0%{background-position:56% 0%}
+    50%{background-position:45% 100%}
+    100%{background-position:56% 0%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:56% 0%}
+    50%{background-position:45% 100%}
+    100%{background-position:56% 0%}
+}
+@keyframes AnimationName {
+    0%{background-position:56% 0%}
+    50%{background-position:45% 100%}
+    100%{background-position:56% 0%}
+}
+
+.page{
+    min-height: 100vh;
+
+}
 .container {
     width: 550px;
-    backdrop-filter: blur(10px);
     border: 2px solid rgba(255, 255, 255, .2);
     border-radius: 30px;
     padding: 50px 40px;
@@ -100,8 +120,8 @@ a {
 a:hover {
     text-decoration: none;
 }    
-.btn {
-    width: 200px;
+.btn{
+    width: 130px;
     font-weight: 500;
     padding: 8px 10px;
     background: #ffffff;
@@ -109,8 +129,18 @@ a:hover {
     border-radius: 10px;
     margin-top: 16px;
     color: #000000;
+    float: right;
 } 
-.btn {
+form button{
+    font-weight: 500;
+    padding: 8px 10px;
+    background: #ffffff;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-top: 10px;
+    color: #000000;
+} 
+.btn,form button{
     border: unset;
     border-radius: 15px;
     color: #212121;
@@ -125,7 +155,7 @@ a:hover {
     overflow: hidden;
 }
    
-.btn::before {
+.btn::before, form button::before  {
     content: "";
     position: absolute;
     top: 0;
@@ -140,14 +170,38 @@ a:hover {
     transition: all 250ms
 }
    
-.btn:hover {
+.btn:hover,form button:hover {
     color: #e8e8e8;
 }
    
-.btn:hover::before {
+.btn:hover::before,form button:hover::before  {
     width: 100%;
 }
 
+.change-password h2{
+    color: white;
+    margin-top: 15px;
+}
+.change-password  input{
+    margin: 5px 0px;
+    background: rgba(255, 255, 255, .2);
+    border: none;
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, .2);
+    border-radius: 10px;
+    font-size: 16px;
+    color: white;
+    padding: 10px;
+    width: 100%;
+}
+.change-password  input::placeholder{
+    color:rgb(255, 255, 255);
+    
+}
+.error,.success{
+    margin-top: 10px;
+    color: white;
+}
     </style>
 </head>
 
@@ -158,6 +212,30 @@ a:hover {
             <p><strong>Username:</strong> <?php echo $username; ?></p>
             <p><strong>Email:</strong> <?php echo $email; ?></p>
             <p><strong>Date of Birth:</strong> <?php echo $birthday; ?></p>
+        </div>
+        <div class="change-password">
+            <h2>Change Password</h2>
+            <form action="change_password.php" method="post">
+                <div class="form-group">
+                    <input type="password" name="current_password" placeholder="Current Password" id="current_password" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" name="new_password" placeholder="New Password" id="new_password" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Change Password</button>
+                </div>
+            </form>
+            <?php
+            if (isset($_SESSION['error'])) {
+                echo '<p class="error">' . $_SESSION['error'] . '</p>';
+                unset($_SESSION['error']);
+            }
+            if (isset($_SESSION['success'])) {
+                echo '<p class="success">' . $_SESSION['success'] . '</p>';
+                unset($_SESSION['success']);
+            }
+            ?>
         </div>
         <a href="home.php" class="btn">Back</a>
     </div>
