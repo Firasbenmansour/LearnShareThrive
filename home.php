@@ -22,7 +22,8 @@ if (isset($_POST['logout'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="home.css">
-    <script src="https://kit.fontawesome.com/f45bd5afd9.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chivo:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    
 </head>
 <body>
     <div class="page">
@@ -43,14 +44,6 @@ if (isset($_POST['logout'])) {
                 </div>
             </div>
         </div>
-        <!-- <div class="searchflex">
-            <div class="searchbarre">
-                <form>
-                    <input type="search" name="menu" placeholder="Search">
-                    <button class="glass"><i class="fa-solid fa-magnifying-glass fa-xl"></i></button>
-                </form>
-            </div>
-        </div> -->
         <div class="card-container">
             <div class="card">
                 <img class="fond" src="Images/MATH.png" alt="Mathematics">
@@ -102,5 +95,6 @@ if (isset($_POST['logout'])) {
             </div>
         </div>        
     </div>
+    
 </body>
 </html>
