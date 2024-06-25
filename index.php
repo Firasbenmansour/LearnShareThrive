@@ -7,18 +7,25 @@
     <link rel="stylesheet" href="styles.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" href="Logo-art-white.png">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chivo:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <style>
+        /* Add styles for error messages */
+        .error-message {
+            color: white;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
+    <?php session_start(); ?>
     <div class="container">
         <nav>
             <img src="Images/LOGO.png" class="Logo">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Courses: </a></li>
                 <li><a href="#">About us</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -28,22 +35,20 @@
                 <h1>Empowering Students to Learn, Share, and Thrive!</h1>
                 <h2>Your Ultimate Hub for Collaborative Learning and Course Sharing</h2>
                 <br>
-                <div class="btn1">
+                <!-- <div class="btn1">
                     <a href="#services-section">
                         <button type="button" class="filled-in-btn">Learn more</button>
                     </a>
                     <a href="Register.html">
                         <button type="button" class="filled-out-btn">Sign up</button>
                     </a>
-                </div>
+                </div> -->
             </div>
 
             <div class="wrapper">
                 <form method="POST" action="login.php">
                     <h1>Login</h1>
-                    <?php if (isset($error)): ?>
-                        <p style="color:red;"><?php echo $error; ?></p>
-                    <?php endif; ?>
+                    
                     <div class="input-box">
                         <input type="text" name="username" placeholder="Username" required>
                         <i class='bx bxs-user'></i>
@@ -52,13 +57,12 @@
                         <input type="password" name="password" placeholder="Password" required>
                         <i class='bx bxs-lock-alt'></i>
                     </div>
-                    <div class="remember-forgot">
-                        <label><input type="checkbox" name="remember">Remember Me</label>
-                        <a href="#">Forgot Password</a>
-                    </div>
+                    <?php if (isset($_SESSION['error'])): ?>
+                        <p class="error-message"><?php echo $_SESSION['error']; unset($_SESSION['error']); ?></p>
+                    <?php endif; ?>
                     <button type="submit" name="login" class="btn">Login</button>
                     <div class="register-link">
-                        <p>Don't have an account? <a href="Register.html">Register</a></p>
+                        <p>Don't have an account? <a href="register.php">Register</a></p>
                     </div>
                 </form>
             </div>
@@ -86,29 +90,6 @@
                 <h1>Diverse Subjects</h1>
                 <h2>Explore thousands of courses across various subjects, from beginner to advanced levels.</h2>
             </div>
-        </div>
-    </div>
-    <div class="about">
-        <div class="content2">
-            <div class="text">
-                <h1>About us</h1>
-                <hr>
-                <br>
-                <br>
-                <p>At LearnShareThrive, our mission is simple yet profound: to foster a dynamic learning ecosystem where students worldwide can connect, collaborate, and excel.</p> <br>
-                <p>We believe in the transformative power of education and the collective wisdom of shared knowledge. Our platform serves as a bridge between learners and educators, offering a diverse array of courses spanning from mathematics to computer science and beyond.</p><br>
-                <p> Whether you're a passionate learner seeking to expand your horizons or an expert eager to share your expertise, LearnShareThrive provides the perfect space to nurture curiosity, ignite creativity, and cultivate a community where everyone can thrive.</p><br>
-                <p> Join us in shaping the future of education—one shared lesson at a time.
-                </p>
-            </div>
-            <div class="socials">
-                <ul>
-                    <li><i class='bx bxl-instagram-alt'></i></li>
-                    <li><i class='bx bxl-facebook-circle' ></i></li>
-                    <li><i class='bx bxl-twitter' ></i></li>
-                    <li><i class='bx bxl-youtube' ></i></li>
-                </ul>
-             </div>
         </div>
     </div>
 </body>
