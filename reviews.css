@@ -1,10 +1,144 @@
+* {
+    margin: 0;  
+    padding: 0;
+    font-family: "Chivo", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(12deg, #000000, #093c41, #0c895e);
+    background-size: 600% 600%;
+    -webkit-animation: AnimationName 34s ease infinite;
+    -moz-animation: AnimationName 34s ease infinite;
+    animation: AnimationName 34s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:56% 0%}
+    50%{background-position:45% 100%}
+    100%{background-position:56% 0%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:56% 0%}
+    50%{background-position:45% 100%}
+    100%{background-position:56% 0%}
+}
+@keyframes AnimationName {
+    0%{background-position:56% 0%}
+    50%{background-position:45% 100%}
+    100%{background-position:56% 0%}
+}
+
+.page{
+    min-height: 100vh;
+
+}
+
+/* Header styles */
+.header {
+    background:transparent;
+    background-size: 600% 600%;
+    color: #fff;
+    padding: 10px 20px; /* Increased padding for better spacing */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.header .logo {
+    width: 100px;
+    height: auto;
+}
+
+.header .menu {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+     /* Pushes the menu items to the left */
+}
+
+.header .menu li {
+    margin: 0 15px; /* Increased margin for better spacing */
+}
+
+.header .menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.header .menu a:hover {
+    color: #0a8a8f;
+}
+
+.header .user {
+    width: 40px;
+    height: auto;
+    cursor: pointer;
+    margin-left: auto; /* Aligns the user icon to the right */
+}
+
+/* Dropdown styles */
+.user-dropdown {
+    position: relative;
+}
+
+.user-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0; /* Align dropdown to the right */
+    margin-top: 8px; /* Adjust spacing from the user icon */
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 40px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #000000;
+}
+
+.user-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.user-dropdown:focus-within .dropdown-content {
+    display: block;
+}
+.page2{
+    padding: 50px 0px;
+}
 .review-container {
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 30px;
+    padding: 20px 40px;
+    background:transparent; /* Semi-transparent white background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #ffffff; /* Dark text color */
+    box-sizing: border-box;
+}
+.review-container h1{
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .existing-reviews, .new-review {
@@ -12,32 +146,130 @@
 }
 
 .review {
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
+    border-top: 1px solid rgba(255, 255, 255, 0.2); 
     padding: 10px 0;
 }
 
 .review p {
-    margin: 5px 0;
+    color: #ffffff; /* Dark text color */ 
 }
-
+#user{
+    font: 20px;
+    margin-bottom: -10px;
+}
 form label {
     display: block;
     margin-top: 10px;
+    color: #fff; /* White text color */
+    font-weight: bold;
 }
 
-form select, form textarea, form button {
+form textarea{
     width: 100%;
-    padding: 10px;
-    margin-top: 5px;
+    max-width: 2000px;
+    padding: 12px; /* Increased padding */
+    margin-top: 10px; /* Adjusted margin */
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(223, 223, 223, 0.507); /* Lighter border color */
+    border-radius: 20px; /* Adjusted border radius */
+    box-sizing: border-box;
+    background: transparent; /* Semi-transparent white background */
+    color: #ffffff; /* Dark text color */
+}
+
+form textarea::placeholder{
+    color: white;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 
 form button {
-    background-color: #28a745;
-    color: #fff;
+    display: inline-block;
+    -webkit-box-shadow: 4px 8px 19px -3px rgb(0, 0, 0);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.527);
+    font-weight: 1000;
+    padding: 12px 20px;
+    background: #e8e8e8;
+    text-decoration: none;
+    border-radius: 15px;
+    margin-top: 16px;
+    color: #000000;
     border: none;
+    position: relative;
+    overflow: hidden;
     cursor: pointer;
+    transition: color 250ms, background-color 250ms;
+}
+
+form button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: #000000;
+    z-index: -1;
+    transition: width 250ms;
 }
 
 form button:hover {
-    background-color: #218838;
+    color: #e8e8e8;
+    background-color: #000000;
 }
+
+form button:hover::before {
+    width: 100%;
+}
+
+.rating-container {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: -15px;
+  }
+  
+  .rating:not(:checked) > input {
+    position: absolute;
+    appearance: none;
+  }
+  
+  .rating:not(:checked) > label {
+    float: right;
+    cursor: pointer;
+    font-size: 30px;
+    color: #000000bd;
+  }
+  
+  .rating:not(:checked) > label:before {
+    content: '★';
+  }
+  
+  .rating > input:checked + label:hover,
+  .rating > input:checked + label:hover ~ label,
+  .rating > input:checked ~ label:hover,
+  .rating > input:checked ~ label:hover ~ label,
+  .rating > label:hover ~ input:checked ~ label {
+    color: #ffffff;
+  }
+  
+  .rating:not(:checked) > label:hover,
+  .rating:not(:checked) > label:hover ~ label {
+    color: #ffffff;
+  }
+  
+  .rating > input:checked ~ label {
+    color: #ffffff;
+  }
+  
+  
+  
+  
+
+
