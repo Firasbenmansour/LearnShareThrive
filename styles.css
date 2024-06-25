@@ -15,7 +15,7 @@
     background-size: cover;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centering content horizontally */
+    align-items: center; 
     
 }
 
@@ -178,31 +178,6 @@ li:hover{
 }
 
 
-.wrapper .remember-forgot {
-    display: flex;
-    justify-content: space-between;
-    font-size: 16.5px;
-    margin: -15px 0 15px 10px;
-    color: #fff;
-}
-
-
-.remember-forgot label input {
-    accent-color: #fff;
-    margin-right: 5px;
-}
-
-
-.remember-forgot a {
-    color: #fff;
-    text-decoration: none;
-}
-
-
-.remember-forgot a:hover {
-    text-decoration: underline;
-}
-
 
 .wrapper .btn {
     width: 100%;
@@ -245,6 +220,7 @@ li:hover{
     font-size: 28px;
     min-height: 100vh;
 }
+
 .services-section .title{
     padding: 150px 20px 0px 20px;
     display: flex;
@@ -252,10 +228,12 @@ li:hover{
     justify-content: center;
     align-items: center;
 }
+
 .services-section .title img{
     width: 80px;
     height: 80px;
 }
+
 .services-section .title .stars2{
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
@@ -298,52 +276,7 @@ li:hover{
 }
 
 
-
-
-.about{
-    background:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(19, 201, 214, 0.459)),url(Images/Pattern.png);
-    background-size: cover;
-    min-height: 100vh;
+.error-message{
     color: white;
-    padding: 200px 20px;
-    display: grid;
-    
+    margin: 5px 0px;
 }
-
-
-.content2{
-    border-bottom: 2px solid rgba(255, 255, 255, 0.301);
-    border-right: 2px solid rgba(255, 255, 255, 0.322);
-    border-radius: 12px;
-    padding: 30px 40px;
-    box-sizing: border-box;
-}
-
-
-.about h1{
-    font-weight: 900; 
-    font-size: 50px;
-    filter: drop-shadow(5px 5px 10px #000000); 
-}
-
-
-.about p{
-    font-weight: 500;
-    font-size: 25px;
-     filter: drop-shadow(0px 5px 5px #000000); 
-}
-
-
-.socials{
-    margin-top: 20px;
-    float: right;
-    font-size: 28px;
-}
-
-
-.socials ul{
-    list-style: none;
-    display: flex;
-    gap: 10px;
-}
-
