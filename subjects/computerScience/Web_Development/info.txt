@@ -1,0 +1,2 @@
+Title: Web Development
+Description: Gain skills in front-end and back-end web development. Learn HTML, CSS, and JavaScript for creating interactive websites. Study server-side frameworks for dynamic content. Develop projects that showcase your web development skills. Understand best practices for web design and user experience.

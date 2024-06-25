@@ -1,0 +1,2 @@
+Title: Introduction to Programming
+Description: Learn the basics of programming languages such as Python or Java. Study variables, control structures, and functions. Practice writing and debugging code. Develop problem-solving skills through programming exercises. Understand the foundations of computer science and software development.
