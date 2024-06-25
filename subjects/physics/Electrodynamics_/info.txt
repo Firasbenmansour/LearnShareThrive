@@ -1,2 +1,0 @@
-Title: Electrodynamics 
-Description: Master the intricate laws governing electric and magnetic fields in this comprehensive course on electrodynamics. Delve into Maxwell's equations, electromagnetic waves, and their applications in modern physics and engineering. Ideal for students and enthusiasts seeking to understand the fundamental principles behind electricity, magnetism, and their dynamic interplay.
