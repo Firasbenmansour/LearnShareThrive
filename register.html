@@ -10,14 +10,28 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chivo:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <style>
+        /* Add your custom CSS styles here */
+        .error-message {
+            color: red;
+            margin-top: 5px;
+            text-align: center;
+            font-size: 14px;
+        }
+        .form-message {
+            color: green;
+            margin-top: 5px;
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
+        <?php session_start(); ?>
         <nav> 
-            <img src="LOGO.png" class="Logo">
+            <img src="Images/LOGO.png" class="Logo">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
                 <li><a href="#">About us</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
@@ -27,17 +41,9 @@
                 <h1>Empowering Students to Learn, Share, and Thrive!</h1>
                 <h2>Your Ultimate Hub for Collaborative Learning and Course Sharing</h2>
                 <br> 
-                <div class="btn1">
-                    <a href="#services-section">
-                        <button type="submit" class="filled-in-btn">Learn more</button>
-                    </a>
-                    <a href="index.html">
-                        <button type="submit" class="filled-out-btn">Sign in</button>
-                    </a>
-                </div>   
             </div>
             <div class="wrapper">
-                <form action="register.php" method="POST">
+                <form id="registerForm" action="register_b.php" method="POST" onsubmit="return validateForm()">
                     <h1>Register</h1>
                     <div class="input-box">
                         <input type="text" name="username" placeholder="Username" required>
@@ -48,16 +54,26 @@
                         <i class='bx bxs-envelope'></i>
                     </div>
                     <div class="input-box">
-                        <input type="password" name="password" placeholder="Password" required>
+                        <input type="password" name="password" id="password" placeholder="Password" required>
                         <i class='bx bxs-lock-alt'></i>
                     </div>
+                    <div class="error-message" id="passwordError"></div>
                     <div class="input-box">
                         <input type="date" name="birthday" placeholder="Birthday" required>
                         <i class='bx bxs-calendar'></i>
                     </div>
                     <button type="submit" name="register" class="btn">Register</button>
                     <div class="login-link">
-                        Already a member? <a href="index.html">Sign In</a>
+                        Already a member? <a href="index.php">Sign In</a>
+                    </div>
+                    <div class="form-message" id="formMessage">
+                        <?php
+                        // Check if there's a message to display from PHP
+                        if (isset($_SESSION['message'])) {
+                            echo $_SESSION['message'];
+                            unset($_SESSION['message']); // Clear the message once displayed
+                        }
+                        ?>
                     </div>
                 </form>
             </div>
@@ -87,28 +103,23 @@
         </div>
         </div>
     </div>
-    <div class="about">
-        <div class="content2">
-            <div class="text">
-                <h1>About us</h1>
-                <hr>
-                <br>
-                <br>
-                <p>At LearnShareThrive, our mission is simple yet profound: to foster a dynamic learning ecosystem where students worldwide can connect, collaborate, and excel.</p> <br>
-                <p>We believe in the transformative power of education and the collective wisdom of shared knowledge. Our platform serves as a bridge between learners and educators, offering a diverse array of courses spanning from mathematics to computer science and beyond.</p><br>
-                <p> Whether you're a passionate learner seeking to expand your horizons or an expert eager to share your expertise, LearnShareThrive provides the perfect space to nurture curiosity, ignite creativity, and cultivate a community where everyone can thrive.</p><br>
-                <p> Join us in shaping the future of education—one shared lesson at a time.
-                </p>
-            </div>
-            <div class="socials">
-                <ul>
-                    <li><i class='bx bxl-instagram-alt'></i></li>
-                    <li><i class='bx bxl-facebook-circle' ></i></li>
-                    <li><i class='bx bxl-twitter' ></i></li>
-                    <li><i class='bx bxl-youtube' ></i></li>
-                </ul>
-             </div>
-        </div>
-    </div>
+</div>
+<script>
+    function validateForm() {
+        var password = document.getElementById("password").value;
+        var passwordError = document.getElementById("passwordError");
+        
+        passwordError.innerHTML = "";
+
+        var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{7,}$/;
+
+        if (!passwordRegex.test(password)) {
+            passwordError.innerHTML = "Password must be at least 7 characters long and include at least one uppercase letter and one lowercase letter.";
+            return false;
+        }
+
+        return true;
+    }
+</script>
 </body>
 </html>
