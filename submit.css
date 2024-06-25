@@ -1,20 +1,39 @@
-*{
-    margin: 0;
+* {
+    margin: 0;  
     padding: 0;
+    font-family: "Chivo", sans-serif;
     box-sizing: border-box;
-    font-family: "poppings", sans-serif;
 }
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image: linear-gradient(to bottom, rgba(21, 144, 158, 0.096),rgba(0, 0, 0, 0.774)), url(Images/Background-fadded.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
+    background: linear-gradient(12deg, #000000, #093c41, #0c895e);
+    background-size: 600% 600%;
+    -webkit-animation: AnimationName 34s ease infinite;
+    -moz-animation: AnimationName 34s ease infinite;
+    animation: AnimationName 34s ease infinite;
 }
+
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:56% 0%}
+    50%{background-position:45% 100%}
+    100%{background-position:56% 0%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:56% 0%}
+    50%{background-position:45% 100%}
+    100%{background-position:56% 0%}
+}
+@keyframes AnimationName {
+    0%{background-position:56% 0%}
+    50%{background-position:45% 100%}
+    100%{background-position:56% 0%}
+}
+
 
 .container {
     width: 550px;
@@ -45,23 +64,28 @@ label {
 
 input[type="text"],
 select,
-textarea,
-input[type="file"] {
+textarea{
+    appearance: none;
     width: 100%;
     padding: 12px; /* Increased padding */
     margin-top: 10px; /* Adjusted margin */
     backdrop-filter: blur(10px);
-    border: 2px solid rgba(0, 0, 0, 0.2); /* Lighter border color */
+    border: 2px solid rgba(255, 255, 255, 0.233); /* Lighter border color */
     border-radius: 20px; /* Adjusted border radius */
     box-sizing: border-box;
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
-    color: #333; /* Dark text color */
+    background:transparent;
+    color: #ffffff; /* Dark text color */
+}
+select:focus{
+    background-color: #000000;
 }
 textarea{
     width: 100% ;
     max-width: 460px;
 }
-
+textarea::placeholder,input[type="text"]::placeholder{
+    color: white;
+}
 button {
     width: 100%;
     padding: 12px; /* Increased padding */
@@ -74,8 +98,28 @@ button {
     transition: background-color 0.3s ease; /* Smooth transition */
 }
 
-button:hover {
-    background-color: #000000; /* Darker blue on hover */
+button:hover , select:hover , textarea:hover, input[type="text"]:hover {
+    background-color: #00000060; /* Darker blue on hover */
     color: #ffffff;
 }
 
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    width: 100%;
+    padding: 12px; /* Increased padding */
+    margin-top: 10px; /* Adjusted margin */
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.233); /* Lighter border color */
+    border-radius: 20px; /* Adjusted border radius */
+    box-sizing: border-box;
+    background:transparent;
+    color: #ffffff; /* Dark text color */
+}
+
+.custom-file-upload:hover {
+    background-color: #00000060;
+    color:#fff;
+}
