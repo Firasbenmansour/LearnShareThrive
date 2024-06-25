@@ -1,19 +1,42 @@
-*{
-    margin: 0;
+* {
+    margin: 0;  
     padding: 0;
+    font-family: "Chivo", sans-serif;
     box-sizing: border-box;
-    font-family: "poppings", sans-serif;
 }
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image: linear-gradient(to bottom, rgba(21, 144, 158, 0.096),rgba(0, 0, 0, 0.774)), url(Images/Background-fadded.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
+    background: linear-gradient(12deg, #000000, #093c41, #0c895e);
+    background-size: 600% 600%;
+    -webkit-animation: AnimationName 34s ease infinite;
+    -moz-animation: AnimationName 34s ease infinite;
+    animation: AnimationName 34s ease infinite;
+}
+
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:56% 0%}
+    50%{background-position:45% 100%}
+    100%{background-position:56% 0%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:56% 0%}
+    50%{background-position:45% 100%}
+    100%{background-position:56% 0%}
+}
+@keyframes AnimationName {
+    0%{background-position:56% 0%}
+    50%{background-position:45% 100%}
+    100%{background-position:56% 0%}
+}
+
+.page{
+    min-height: 100vh;
+
 }
 .wrapper {
     width: 550px;
@@ -89,4 +112,3 @@ body {
     font-size: 15px;
     font-weight: 600;
 }
-
